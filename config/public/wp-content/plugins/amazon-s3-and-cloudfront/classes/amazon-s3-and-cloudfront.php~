@@ -333,8 +333,7 @@ class Amazon_S3_And_CloudFront extends AWS_Plugin_Base {
 			$domain_bucket = $s3object['bucket'];
 		}
 		elseif ( is_ssl() || $this->get_setting( 'force-ssl' ) ) {
-			$domain_bucket = $s3object['bucket'] . '.s3.amazonaws.com';
-			//$domain_bucket = 's3.amazonaws.com/' . $s3object['bucket'];
+			$domain_bucket = 's3.amazonaws.com/' . $s3object['bucket'];
 		}
 		else {
 			$domain_bucket = $s3object['bucket'] . '.s3.amazonaws.com';
