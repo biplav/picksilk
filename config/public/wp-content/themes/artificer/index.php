@@ -8,7 +8,7 @@
  * @package WooFramework
  * @subpackage Template
  */
-	//get_header();
+	get_header();
 	global $woo_options;
 
 ?>
