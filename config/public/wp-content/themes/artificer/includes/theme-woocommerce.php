@@ -110,7 +110,7 @@ if ( ! function_exists( 'artificer_header_checkout_link' ) ) {
 	function artificer_header_checkout_link() {
 	global $woocommerce;
 	?>
-	<a href="<?php echo $woocommerce->cart->get_checkout_url()?>" class="checkout"><span class="lozenge"><?php _e('Checkout','woothemes') ?></span></a>
+	<!-- <li><a href="<?php echo $woocommerce->cart->get_checkout_url()?>"><i class="fa fa-crosshairs"></i><?php _e('Checkout','woothemes') ?> [<?php echo $woocommerce->cart->cart_contents_count  ?>]</a></li> -->
 	<?php }
 }
 
@@ -319,12 +319,9 @@ function header_add_to_cart_fragment( $fragments ) {
 function woocommerce_cart_link() {
 	global $woocommerce;
 	?>
-	<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> <?php _e('in your shopping cart', 'woothemes'); ?>" class="cart-button ">
-	<span class="label"><?php _e('My Basket:', 'woothemes'); ?></span>
-	<?php echo $woocommerce->cart->get_cart_total();  ?>
-	<span class="items"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count); ?></span>
-	</a>
+	<li><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>" class="cart-button ">
+	<i class="fa fa-shopping-cart"></i><?php _e('My Basket:', 'woothemes'); ?>
+	</a></li>
 	<?php
 }
-
 ?>

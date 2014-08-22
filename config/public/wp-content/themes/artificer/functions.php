@@ -42,7 +42,24 @@ if ( is_woocommerce_activated() ) {
 
 
 
+if (function_exists('register_sidebar')) {
+    register_sidebar(array(
+    'name' => 'Extra Header Widget Area',
+    'id' => 'extra-widget-area',
+    'description' => 'Extra widget area after the header',
+    'before_widget' => '<div class="widget my-extra-widget col-md-2">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
+    ));
+}
 
+add_action ('__after_header', 'add_my_widget_area', 0);
+function add_my_widget_area() {
+    if (function_exists('dynamic_sidebar')) {
+    dynamic_sidebar('Extra Header Widget Area');
+    }
+}
 
 
 

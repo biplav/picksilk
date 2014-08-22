@@ -10,7 +10,8 @@ $widgets = array(
 				'includes/widgets/widget-woo-flickr.php', 
 				'includes/widgets/widget-woo-search.php', 
 				'includes/widgets/widget-woo-twitter.php', 
-				'includes/widgets/widget-woo-subscribe.php'
+				'includes/widgets/widget-woo-subscribe.php'/*,
+				'includes/widgets/widget-woo-price-filter.php'*/
 				);
 
 // Allow child themes/plugins to add widgets to be loaded.
@@ -25,8 +26,10 @@ $widgets = apply_filters( 'woo_widgets', $widgets );
 /*---------------------------------------------------------------------------------*/
 if (!function_exists( 'woo_deregister_widgets')) {
 	function woo_deregister_widgets(){
-	    unregister_widget( 'WP_Widget_Search' );         
+	    unregister_widget( 'WP_Widget_Search' ); 
+		//unregister_widget( 'WC_Widget_Price_Filter' ); 
 	}
+	//register_widget( 'WC_Widget_Price_Filter_Custom');
 }
 add_action( 'widgets_init', 'woo_deregister_widgets' );  
 

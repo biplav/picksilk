@@ -306,7 +306,6 @@ sub {
 /* 1.1 Defaults */
 html {
   font-size: 62.5%;
-  background: url("images/body.gif") #e6e1dd;
 }
 body {
   font-size: 1.4em;
@@ -316,7 +315,6 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
-  background: url("images/body.png");
 }
 #wrapper {
   padding: 0 1.618em;
@@ -582,12 +580,6 @@ ul.nav li a {
   display: none;
 }
 /* 2.3 Header */
-#header {
-  padding: 3.631em 0 1.618em;
-  clear: both;
-  position: relative;
-  text-align: center;
-}
 #header #logo {
   float: left;
 }
@@ -1545,7 +1537,7 @@ ul.nav li a {
 /* SEARCH FORM */
 .searchform,
 #searchform {
-  border: 1px solid #c2baad;
+  border: 1px solid #AB1B21;
   -webkit-border-radius: 0.236em;
   border-radius: 0.236em;
   -moz-background-clip: padding;
@@ -2309,7 +2301,7 @@ a.remove {
   background-clip: padding-box;
   font-weight: 700;
   font-size: .857em;
-  border: 2px dashed #c2baad;
+  border: 2px dashed #AB1B21;
   box-shadow: 0 0 0 0.236em #968873;
   -webkit-box-shadow: 0 0 0 0.236em #968873;
 }
@@ -3082,7 +3074,7 @@ table.cart img {
   box-shadow: inset 0 0 0 0.382em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.2);
 }
 #sidebar .widget_shopping_cart .inner {
-  border-color: #c2baad;
+  border-color: #AB1B21;
 }
 #sidebar .widget_shopping_cart a,
 #sidebar .widget_shopping_cart h3 {
@@ -3129,14 +3121,14 @@ table.cart img {
   cursor: pointer;
   outline: none;
   top: -1px;
-  background: #f6f8f9;
-  background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f8f9), color-stop(50%, #e5ebee), color-stop(51%, #d7dee3), color-stop(100%, #f5f7f9));
-  background: -webkit-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
-  background: -o-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
-  background: -ms-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
-  background: linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f8f9', endColorstr='#f5f7f9', GradientType=0);
+  background: #AB1B21;
+  background: -moz-linear-gradient(top, #AB1B21 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #AB1B21), color-stop(50%, #e5ebee), color-stop(51%, #d7dee3), color-stop(100%, #f5f7f9));
+  background: -webkit-linear-gradient(top, #AB1B21 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  background: -o-linear-gradient(top, #AB1B21 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  background: -ms-linear-gradient(top, #AB1B21 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  background: linear-gradient(top, #AB1B21 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AB1B21', endColorstr='#f5f7f9', GradientType=0);
   -webkit-transition: all ease-in-out 0.2s;
   -moz-transition: all ease-in-out 0.2s;
   -ms-transition: all ease-in-out 0.2s;
@@ -3144,8 +3136,8 @@ table.cart img {
   transition: all ease-in-out 0.2s;
 }
 .widget_price_filter .ui-slider .ui-slider-handle:hover {
-  box-shadow: 0 0 0 0.366em rgba(0, 0, 0, 0.075);
-  -webkit-box-shadow: 0 0 0 0.366em rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0 0 0.366em #AB1B21;
+  -webkit-box-shadow: 0 0 0 0.366em #AB1B21;
 }
 .widget_price_filter .ui-slider .ui-slider-handle:last-child {
   margin-left: -1em;
@@ -3161,19 +3153,19 @@ table.cart img {
   -ms-transition: all ease-in-out 0.2s;
   -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
-  background-image: linear-gradient(left, #968873 0%, #c9bba6 100%);
-  background-image: -o-linear-gradient(left, #968873 0%, #c9bba6 100%);
-  background-image: -moz-linear-gradient(left, #968873 0%, #c9bba6 100%);
-  background-image: -webkit-linear-gradient(left, #968873 0%, #c9bba6 100%);
-  background-image: -ms-linear-gradient(left, #968873 0%, #c9bba6 100%);
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #968873), color-stop(1, #c9bba6));
+  background-image: linear-gradient(left, #AB1B21 0%, #FF5A60 100%);
+  background-image: -o-linear-gradient(left, #AB1B21 0%, #FF5A60 100%);
+  background-image: -moz-linear-gradient(left, #AB1B21 0%, #FF5A60 100%);
+  background-image: -webkit-linear-gradient(left, #AB1B21 0%, #FF5A60 100%);
+  background-image: -ms-linear-gradient(left, #AB1B21 0%, #FF5A60 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #AB1B21), color-stop(1, #FF5A60));
   -webkit-border-radius: 1em;
   border-radius: 1em;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   top: -1px !important;
-  border: 1px solid #857762;
+  border: 1px solid #AB1B21;
 }
 .widget_price_filter .ui-slider .ui-slider-range:before {
   content: "";
@@ -3192,10 +3184,10 @@ table.cart img {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  border: 1px solid #7d7269;
-  background: #746651;
-  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #AB1B21;
+  background: #AB1B21;
+  box-shadow: inset 0 1px 2px 0 #AB1B21;
+  -webkit-box-shadow: inset 0 1px 2px 0 #AB1B21;
 }
 .widget_price_filter .ui-slider-horizontal {
   height: 1em;
@@ -3718,3 +3710,11 @@ img.ui-datepicker-trigger {
   width: auto;
 }
 /* 8.4 Uniform */
+
+.black {
+	background: #000 !important; 
+}
+
+.pink {
+	background: #FF5A60 !important; 
+}

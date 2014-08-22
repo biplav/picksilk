@@ -8,7 +8,7 @@
  * @package WooFramework
  * @subpackage Template
  */
-	get_header();
+	//get_header();
 	global $woo_options;
 
 ?>
@@ -101,7 +101,7 @@
 
 		</div><!--/.home-intro-->
 
-		<section id="main" class="<?php if ( $woo_options[ 'woo_display_store_info' ] == "false" ) echo 'fullwidth'; else echo 'col-left'; ?>">
+		<section id="main" class="<?php if ( $woo_options[ 'woo_display_store_info' ] == "false" ) echo 'fullwidth'; else echo 'fullwidth'; ?>">
 
 		<?php woo_loop_before(); ?>
 
@@ -137,39 +137,6 @@
 		</section><!-- /#main -->
 
 		<?php woo_main_after(); ?>
-
-		<?php if ( $woo_options[ 'woo_display_store_info' ] == "true" ) { ?>
-		<aside id="sidebar" class="col-right">
-		<?php } ?>
-			<?php if ( $woo_options[ 'woo_display_store_info' ] == "true" ) {
-			$email = get_option('woo_store_email_address');
-			$phone = get_option('woo_store_phone_number');
-			$twitterID = get_option('woo_contact_twitter');
-			?>
-				<ul class="store-info">
-
-					<li class="phone">
-						<div class="inner">
-							<span><?php _e('Call us:','woothemes'); ?></span>
-							<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
-						</div>
-					</li>
-
-					<li class="email">
-						<div class="inner">
-							<span><?php _e('Send us an email:','woothemes'); ?></span>
-							<a href="mailto:<?php echo $email; ?>" title="<?php _e('Send us an email', 'woothemes')?>"><?php echo $email; ?></a>
-						</div>
-					</li>
-
-				</ul><!--/.store-info-->
-			<?php } ?>
-		<?php if ( $woo_options[ 'woo_display_store_info' ] == "true" ) { ?>
-		</aside>
-		<?php } ?>
-
-        <?php //get_sidebar(); ?>
-
     </div><!-- /#content -->
 
 <?php get_footer(); ?>

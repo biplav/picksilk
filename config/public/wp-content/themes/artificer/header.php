@@ -15,11 +15,28 @@
 <head>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php woo_title(''); ?></title>
 <?php woo_meta(); ?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/css/prettyPhoto.css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/css/price-range.css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/css/animate.css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/css/main.css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/css/responsive.css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/respond.min.js"></script>
+<![endif]-->       
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/ico/apple-touch-icon-57-precomposed.png">
 <?php
 	wp_head();
 	woo_head();
@@ -28,42 +45,29 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<header id="header"><!--header-->
+		<div class="header_top pink"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="logo col-md-2 col-md-offset-5">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo_header.png" alt="pick the silk that suits you" /></a>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+	</header>
 <?php woo_top(); ?>
-
 <div id="wrapper">
-
-	<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
-
-	<div id="top">
-		<nav class="col-full" role="navigation">
-			<?php wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'top-nav', 'menu_class' => 'nav fl', 'theme_location' => 'top-menu' ) ); ?>
-		</nav>
-	</div><!-- /#top -->
-
-    <?php } ?>
-    
-    <?php woo_header_before(); ?>
-
+	<div class="header-middle"><!--header-middle-->
+		<div class="container">
+			<div class="row">
+			<?php dynamic_sidebar('Extra Header Widget Area'); ?>
+			<!--<?php woo_nav_before(); ?> -->
+			</div>
+		</div>
+	</div><!--/header-middle-->
+	<?php woo_header_before(); ?>
 	<header id="header" class="col-full">
-	    
-	    <hgroup>
-	        
-	        <?php
-			    $logo = get_template_directory_uri() . '/images/logo.png';
-				if ( isset( $woo_options['woo_logo'] ) && $woo_options['woo_logo'] != '' ) { $logo = $woo_options['woo_logo']; }
-				if ( isset( $woo_options['woo_logo'] ) && $woo_options['woo_logo'] != '' && is_ssl() ) { $logo = preg_replace("/^http:/", "https:", $woo_options['woo_logo']); }
-			?>
-			<?php if ( ! isset( $woo_options['woo_texttitle'] ) || $woo_options['woo_texttitle'] != 'true' ) { ?>
-			    <a id="logo" href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'description' ); ?>">
-			    	<img src="<?php echo $logo; ?>" alt="<?php bloginfo( 'name' ); ?>" />
-			    </a>
-		    <?php } ?>
-	        
-			<h1 class="site-title <?php if ( $woo_options['woo_texttitle'] == 'true' ) { echo 'visible'; } ?>"><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-			<p class="site-description <?php if ( $woo_options['woo_tagline'] == 'true' ) { echo 'visible'; } ?>"><?php bloginfo( 'description' ); ?></p>
-		      	
-		</hgroup>
-
 		<?php if ( isset( $woo_options['woo_ad_top'] ) && $woo_options['woo_ad_top'] == 'true' ) { ?>
         <div id="topad">
 			<?php
@@ -76,29 +80,7 @@
 			<?php } ?>
 		</div><!-- /#topad -->
         <?php } ?>
-        
-        <?php woo_nav_before(); ?>
-        
         <h3 class="nav-toggle"><a href="#navigation"><?php _e('Main navigation', 'woothemes'); ?></a></h3>
-
-		<nav id="navigation" class="col-full" role="navigation">
-			
-			<?php
-			if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary-menu' ) ) {
-				wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'main-nav', 'menu_class' => 'nav', 'theme_location' => 'primary-menu' ) );
-			} else {
-			?>
-	        <ul id="main-nav" class="nav fl">
-				<?php if ( is_page() ) $highlight = 'page_item'; else $highlight = 'page_item current_page_item'; ?>
-				<li class="<?php echo $highlight; ?>"><a href="<?php echo home_url( '/' ); ?>"><?php _e( 'Home', 'woothemes' ); ?></a></li>
-				<?php wp_list_pages( 'sort_column=menu_order&depth=6&title_li=&exclude=' ); ?>
-			</ul><!-- /#nav -->
-	        <?php } ?>
-	
-		</nav><!-- /#navigation -->
-		
 		<?php woo_nav_after(); ?>
-	
 	</header><!-- /#header -->
-		
 	<?php woo_content_before(); ?>
