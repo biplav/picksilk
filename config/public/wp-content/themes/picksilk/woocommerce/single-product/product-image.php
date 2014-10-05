@@ -36,7 +36,7 @@ global $post, $woocommerce, $product;
 
 		} else if($should_print){
 			
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="Placeholder" data-src="holder.js/100%%x200/random/text:%s"/>', 'Test','Test' ), $post->ID );
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="Placeholder" data-src="holder.js/100%%x200/random/text:%s"/>' , '',the_title() ), $post->ID );
 
 		}
 	?>

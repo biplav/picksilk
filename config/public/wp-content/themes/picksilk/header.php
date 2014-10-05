@@ -15,7 +15,9 @@
  </style>
 <link rel="icon" href="" type="image/x-icon">
 <link rel="shortcut icon" href="" type="image/x-icon">
-<?php wp_head(); ?>
+<?php 
+global $woocommerce;
+wp_head(); ?>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <!-- Optional theme -->
@@ -41,7 +43,7 @@
         </div>
         <div class="collapse navbar-collapse pull-right">
           <ul class="nav navbar-nav">
-            <li><a href="/"><span class='glyphicon glyphicon-shopping-cart'></span></a></li>
+            <li><a href=""<?php echo $woocommerce->cart->get_checkout_url(); ?>"><span class='glyphicon glyphicon-shopping-cart'></span></a></li>
             <li><a href="<?php echo wp_login_url( get_permalink() ); ?>"><span class='glyphicon glyphicon-user'></span></a></li>
           </ul>
         </div><!--/.nav-collapse -->

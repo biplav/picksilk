@@ -16,10 +16,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @see woocommerce_default_product_tabs()
  */
 $tabs = apply_filters( 'woocommerce_product_tabs', array() );
-
-if ( ! empty( $tabs ) ) : ?>
+$show_tab = FALSE;
+if ( ! empty( $tabs )  ) : ?>
 
 	<div class="woocommerce-tabs">
+		<? if($show_tab) : ?>
 		<ul class="tabs">
 			<?php foreach ( $tabs as $key => $tab ) : ?>
 
@@ -29,6 +30,7 @@ if ( ! empty( $tabs ) ) : ?>
 
 			<?php endforeach; ?>
 		</ul>
+	<?php endif?>
 		<?php foreach ( $tabs as $key => $tab ) : ?>
 
 			<div class="panel entry-content" id="tab-<?php echo $key ?>">
