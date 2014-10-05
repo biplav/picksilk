@@ -10,6 +10,10 @@
 	overflow:hidden;
 }
 
+.mainArea {
+  padding-top:20px;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

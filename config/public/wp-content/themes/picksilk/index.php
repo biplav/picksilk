@@ -91,4 +91,4 @@ $count = count($product_categories);
  ?>
 </div>
 	<?php get_footer(); ?>
-</body>
+
