@@ -54,7 +54,7 @@ code {
   font-size: 80%;
 }
 
-#myCarousel > div > div:nth-child(1) > img.attachment-shop_single.wp-post-image{
+#myCarousel > div > div > img.attachment-shop_single.wp-post-image{
     display: block;
     margin-left: auto;
     margin-right: auto;
