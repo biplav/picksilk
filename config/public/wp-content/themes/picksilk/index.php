@@ -12,6 +12,7 @@ Tags: Tags to locate your theme in the WordPress theme repository
 global $woo_options;
 ?>
 <?php
+woo_main_before();
 if( isset( $woo_options['woo_stand_first'] ) ) {
       echo '<div class="stand-first">';
           echo stripslashes( $woo_options['woo_stand_first'] );
@@ -25,11 +26,12 @@ if( isset( $woo_options['woo_stand_first'] ) ) {
     if ( have_posts() ) { 
     while ( have_posts() ) { 
         the_post();
-          get_template_part( 'content', get_post_format() );
+        get_template_part( 'content', get_post_format() );
         }
     }
     woo_loop_after();
   }
+  woo_main_after();
 ?>
 <?php get_footer(); ?>
 
