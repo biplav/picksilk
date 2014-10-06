@@ -17,11 +17,13 @@ if( isset( $woo_options['woo_stand_first'] ) ) {
       echo '<div class="stand-first">';
           echo stripslashes( $woo_options['woo_stand_first'] );
           echo '</div>';
-    } 
-  if ( is_front_page() || is_home() ) {
+}
+//echo var_dump(is_front_page());
+//echo var_dump(is_home()); 
+if ( is_front_page() || is_home() ) {
     // Include the featured content template.
     get_template_part('front_page');
-  } else {
+} else {
     woo_loop_before();
     if ( have_posts() ) { 
     while ( have_posts() ) { 
@@ -30,8 +32,8 @@ if( isset( $woo_options['woo_stand_first'] ) ) {
         }
     }
     woo_loop_after();
-  }
-  woo_main_after();
+}
+woo_main_after();
 ?>
 <?php get_footer(); ?>
 
