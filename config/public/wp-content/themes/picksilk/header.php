@@ -43,9 +43,12 @@ wp_head(); ?>
         </div>
         <div class="collapse navbar-collapse pull-right">
           <ul class="nav navbar-nav">
-            <li><a href=""<?php echo $woocommerce->cart->get_checkout_url(); ?>"><span class='glyphicon glyphicon-shopping-cart'></span></a></li>
+            <li><a href="<?php echo $woocommerce->cart->get_checkout_url(); ?>"><span class='glyphicon glyphicon-shopping-cart'></span></a></li>
             <li><a href="<?php echo wp_login_url( get_permalink() ); ?>"><span class='glyphicon glyphicon-user'></span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
+    <?php
+      do_action( 'woocommerce_before_my_page_page' );
+    ?>

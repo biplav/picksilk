@@ -11,9 +11,17 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce, $wp_query;
 
+$disable_order_by = True;
+
 if ( 1 == $wp_query->found_posts || ! woocommerce_products_will_display() )
 	return;
+
+if($disable_order_by)
+	return;
+
 ?>
+
+
 <form class="woocommerce-ordering" method="get">
 	<select name="orderby" class="orderby">
 		<?php
