@@ -42,7 +42,7 @@
             <?php
             	// Determine wether or not to display comments here, based on "Theme Options".
             	if ( isset( $woo_options['woo_comments'] ) && in_array( $woo_options['woo_comments'], array( 'page', 'both' ) ) ) {
-            		comments_template();
+            		//comments_template();
             	}
 
 				} // End WHILE Loop
