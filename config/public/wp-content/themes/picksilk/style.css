@@ -11,7 +11,12 @@
 }
 
 .mainArea {
-  padding-top:20px;
+  padding-top:0px;
+}
+
+#categoryCarousel {
+  margin-left: 0px;
+  margin-right:0px;
 }
 
 /* Sticky footer styles

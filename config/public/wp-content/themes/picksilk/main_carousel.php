@@ -19,6 +19,8 @@
 
 <!-- Carousel
     ================================================== -->
+    <div class="container" >
+      <div class="row" >
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -38,7 +40,7 @@
             $product_description=$product->post->post_content ;
             $product_price=$_product->get_price_html();
             $active =$first ? 'active' : '';
-            echo sprintf('<div class="item %s"><img class="baseImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" >%s</img><div class="container"><div class="carousel-caption"><h1>%s</h1><p>%s</p><p><a class="btn btn-lg btn-primary" href="%s" role="button">%s</a></p></div></div></div>',$active,$image_src,$product_name,$product_description,$product_url,$product_price);
+            echo sprintf('<div class="item %s"><img class="baseImg thumbnail media-object" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" >%s</img><div class="container"><div class="carousel-caption"><h1>%s</h1><p>%s</p><p><a class="btn btn-lg btn-primary" href="%s" role="button">%s</a></p></div></div></div>',$active,$image_src,$product_name,$product_description,$product_url,$product_price);
             $first=FALSE;
           }
         ?>
