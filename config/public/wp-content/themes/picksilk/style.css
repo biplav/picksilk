@@ -90,3 +90,12 @@ code {
   margin-top:5px;
   margin-bottom:5px;
 }
+
+.cart-logo {
+  font-size:30px;
+  color:white;
+}
+
+.navbar-nav>li>a:hover {
+  background-color:#DA2828;
+}

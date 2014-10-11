@@ -33,7 +33,7 @@ wp_head(); ?>
   <div id="bodyStart" class="container"> <!-- start of the body -->
 	 <div class="navbar navbar-fixed-top" role="navigation" style="margin-bottom:0px">
       <div class="header">
-        <div class="container">
+        <div class="container" style="padding:5px">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -43,7 +43,7 @@ wp_head(); ?>
         </div>
         <div class="collapse navbar-collapse pull-right">
           <ul class="nav navbar-nav">
-            <li><a href="<?php echo $woocommerce->cart->get_checkout_url(); ?>"><span class='glyphicon glyphicon-shopping-cart'></span></a></li>
+            <li><a href="<?php echo $woocommerce->cart->get_checkout_url(); ?>"><span class='glyphicon glyphicon-shopping-cart cart-logo'></span></a></li>
             <!--<li><a href="<?php echo wp_login_url( get_permalink() ); ?>"><span class='glyphicon glyphicon-user'></span></a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
