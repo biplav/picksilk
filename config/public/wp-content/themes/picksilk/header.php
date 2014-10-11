@@ -13,8 +13,8 @@
 }
 
  </style>
-<link rel="icon" href="" type="image/x-icon">
-<link rel="shortcut icon" href="" type="image/x-icon">
+<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" type="image/x-icon">
 <?php 
 global $woocommerce;
 wp_head(); ?>
