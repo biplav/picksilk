@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $post, $woocommerce, $product;
 
 ?>
-<h1> <?php the_title(); ?> </h1>
+<h1 class="page-title"> <?php the_title(); ?> </h1>
 <div class="images">
 	<?php
 	$attachment_ids = $product->get_gallery_attachment_ids();

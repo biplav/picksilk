@@ -72,7 +72,7 @@ if ( $attachment_ids ) {
                 } else {
                     echo '<div class="item">';
                 }
-                echo sprintf('<img src="%s" alt="%s" class="thumbnail media-object"/> ',$image_link,$image_title); 
+                echo sprintf('<img class="baseImg thumbnail media-object" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="><img src="%s" alt="%s" class="productImage"/></img> ',$image_link,$image_title); 
                 echo sprintf('<div class="carousel-caption">%s</div></div>',the_title());
                 $count ++;
             }

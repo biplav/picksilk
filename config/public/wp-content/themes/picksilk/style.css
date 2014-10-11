@@ -67,3 +67,26 @@ code {
     min-width: initial !important;
     height: initial;
 }
+
+#categoryCarousel > div > div > img.attachment-shop_single.wp-post-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    min-width: initial !important;
+    height: initial;
+}
+
+#productImageCarousel > div > div > img.productImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    min-width: initial !important;
+    height: initial;
+}
+
+.page-title {
+  margin-top:5px;
+  margin-bottom:5px;
+}
