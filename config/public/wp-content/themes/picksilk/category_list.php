@@ -32,4 +32,5 @@ $count = count($product_categories);
      echo "</div>";
  }
  ?>
-</div>
+ </div>
+

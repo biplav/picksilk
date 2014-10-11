@@ -31,8 +31,9 @@ wp_head(); ?>
 </head>
 <body class="">
   <div id="bodyStart" class="container"> <!-- start of the body -->
-	 <div class="navbar navbar-fixed-top header" role="navigation">
+	 <div class="navbar navbar-fixed-top" role="navigation" style="margin-bottom:0px">
       <div class="header">
+        <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -47,6 +48,7 @@ wp_head(); ?>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
+    </div>
     </div>
     <?php
       do_action( 'woocommerce_before_my_page_page' );
