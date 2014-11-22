@@ -1,6 +1,5 @@
 <div class="category">
-  		
-  	
+
 <?php
     $args = array(
     'number'     => $number,
