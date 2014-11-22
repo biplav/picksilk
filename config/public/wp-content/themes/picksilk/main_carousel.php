@@ -19,8 +19,8 @@
 
 <!-- Carousel
     ================================================== -->
-    <div class="container" >
-      <div class="row" >
+    <div class="container" style="padding-top:65px">
+    <div class="row" >
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -45,8 +45,5 @@
           }
         ?>
       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    
     </div><!-- /.carousel -->
 </div>
