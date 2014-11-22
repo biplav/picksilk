@@ -31,7 +31,7 @@ wp_head(); ?>
 </head>
 <body class="">
   <div id="bodyStart" class="container"> <!-- start of the body -->
-	 <div class="navbar navbar-fixed-top" role="navigation" style="margin-bottom:0px">
+	 <div class="navbar navbar-fixed-top" role="navigation">
       <div class="help_header">
       <div class="container">
         <div class="collapse navbar-collapse pull-left">
@@ -62,15 +62,25 @@ wp_head(); ?>
           </td>
           </table>
         </div>
-        <div class="collapse navbar-collapse pull-right">
+      <div class="collapse navbar-collapse pull-right">
           <ul class="nav navbar-nav">
             <li><a href="<?php echo $woocommerce->cart->get_checkout_url(); ?>"><span class='glyphicon glyphicon-shopping-cart cart-logo'></span></a></li>
             <!--<li><a href="<?php echo wp_login_url( get_permalink() ); ?>"><span class='glyphicon glyphicon-user'></span></a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
-    </div>
-    </div>
+      </div>
+        <div class="container" >
+          <ul class="nav nav-tabs">
+            <li role="presentation"><a href="#"><div class="menu_text">All Sarees</div></a></li>
+            <li role="presentation"><a href="#"><div class="menu_text">Designer Sarees</div></a></li>
+            <li role="presentation"><a href="#"><div class="menu_text">Traditional Sarees</div></a></li>
+            <li role="presentation"><a href="#"><div class="menu_text">About Us</div></a></li> 
+            <li role="presentation"><a href="#"><div class="menu_text">Contact Us</div></a></li> 
+          </ul>
+        </div>
+      </div>
+   
     <?php
       do_action( 'woocommerce_before_my_page_page' );
     ?>
