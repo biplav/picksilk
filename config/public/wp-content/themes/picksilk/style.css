@@ -26,10 +26,14 @@
   font-size: 18px;font-family: sans;color: #ff4650;
 }
 
-.categoryThumbnail {
-	width:150px;
-	height:300px;
-	overflow:hidden;
+.category_background {
+  padding: 10px;
+	background-color: #e8e3e3;
+}
+
+.category_caption_background {
+  padding: 5px;
+  background-color: #eeeeee;
 }
 
 .mainArea {
