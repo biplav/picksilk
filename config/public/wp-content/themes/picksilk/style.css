@@ -4,8 +4,16 @@
 	background-image: linear-gradient(to bottom,#ff5960 0,#ff5960 100%);
 }
 
+.header_text {
+  font-size: 38px;font-family: sans;color: white;
+}
+
+.slogan_text {
+  font-size: 18px;font-family: sans;color: white;
+}
+
 .help_header {
-  height:26px;
+  height:24px;
   background-color: #666666;
   background-image: linear-gradient(to bottom,#666666 0,#666666 100%);
 }
@@ -108,5 +116,8 @@ code {
 }
 
 .navbar-nav>li>a:hover {
-  background-color:#DA2828;
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  border-radius: 50%;
+  background-color:#ff4650;
 }

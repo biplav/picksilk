@@ -46,13 +46,21 @@ wp_head(); ?>
 
       </div>
       <div class="header">
-        <div class="container" style="padding:5px">
+        <div class="container" style="padding-top: 5px;padding-left: 0px;">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/" style="font-size: 38px;font-family: sans;color: white;">picksilk</a>
+          <table>
+          <td>
+          <a class="navbar-brand" href="/" ><div class="header_text">picksilk</div></a>
+          </td><td>
+          <div class="slogan_text">
+          pick the silk <br/> that suits you
+          </div>
+          </td>
+          </table>
         </div>
         <div class="collapse navbar-collapse pull-right">
           <ul class="nav navbar-nav">
