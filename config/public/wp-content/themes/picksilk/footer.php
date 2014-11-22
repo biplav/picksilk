@@ -42,5 +42,12 @@
       </div>
     </div>
 </footer>
+<script type="text/javascript">
+
+    (function(i,s,o,g,r,a,m){i['BakBakObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.id='bakbakscript';m.parentNode.insertBefore(a,m)
+      })(window,document,'script','http://www.bakbak.io/js/bakbak.js?id=547072ac8a7c460200b44e70','bakbak');
+        </script>
 </body>
 </html>
