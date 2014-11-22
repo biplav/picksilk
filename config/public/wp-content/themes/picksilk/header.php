@@ -32,6 +32,19 @@ wp_head(); ?>
 <body class="">
   <div id="bodyStart" class="container"> <!-- start of the body -->
 	 <div class="navbar navbar-fixed-top" role="navigation" style="margin-bottom:0px">
+      <div class="help_header">
+      <div class="container">
+        <div class="collapse navbar-collapse pull-left">
+          <ul class="nav navbar-nav">
+            <li><div class="help_text">Call Us: 080 - 40909240<div></li></ul>
+        </div>
+        <div class="collapse navbar-collapse pull-right">
+          <ul class="nav navbar-nav">
+            <li><div class="help_text">help@picksilk.com<div></li></ul>
+        </div>
+        </div>
+
+      </div>
       <div class="header">
         <div class="container" style="padding:5px">
         <div class="navbar-header">
@@ -39,7 +52,7 @@ wp_head(); ?>
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><img src='<?php echo get_template_directory_uri(); ?>/img/logo_header.png'/></a>
+          <a class="navbar-brand" href="/" style="font-size: 38px;font-family: sans;color: white;">picksilk</a>
         </div>
         <div class="collapse navbar-collapse pull-right">
           <ul class="nav navbar-nav">

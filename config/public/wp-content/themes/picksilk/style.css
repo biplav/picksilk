@@ -1,7 +1,17 @@
 .header {
 	height:76px;
-	background-color: #FF5A60;
-	background-image: linear-gradient(to bottom,#FF5A60 0,#FF5A60 100%);
+	background-color: #ff5960;
+	background-image: linear-gradient(to bottom,#ff5960 0,#ff5960 100%);
+}
+
+.help_header {
+  height:26px;
+  background-color: #666666;
+  background-image: linear-gradient(to bottom,#666666 0,#666666 100%);
+}
+
+.help_text {
+  font-size: 16px;font-family: sans;color: white;
 }
 
 .categoryThumbnail {
