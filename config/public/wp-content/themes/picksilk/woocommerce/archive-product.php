@@ -22,6 +22,7 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
+	<div class="container" style="padding-top:50px">
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
@@ -62,32 +63,30 @@ get_header( 'shop' ); ?>
 				?>
 				<?php endwhile; // end of the loop. ?>
 				<!-- Indicators -->
-      			<ol class="carousel-indicators">
-        		<?php for($i = 0; $i < count($products); $i++) {
-          			if($i == 0) echo '<li data-target="#categoryCarousel" data-slide-to="0" class="active"></li>';
-          			else echo sprintf('<li data-target="#categoryCarousel" data-slide-to="%s"></li>',$count);
-        			}
-        		?>
-      			</ol>
-      			<div class="carousel-inner">
+      			
 					<?php //wc_get_template_part( 'content', 'product' ); ?>
 					<?php 
           $first = TRUE;
+          $i = 1;
+          echo '<div class="row">';
           foreach($products as $product) {
-            $image_src = has_post_thumbnail( $product->post->ID ) ? get_the_post_thumbnail($product->post->ID, 'shop_single') : 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==';
-            $product_name=esc_attr($product->post->post_title ? $product->post->post_title : $product->post->ID);
+          	$image_src =wp_get_attachment_image_src( get_post_thumbnail_id($product->post->ID), $size);
+          	$image_src = $image_src[0];
+			$product_name=esc_attr($product->post->post_title ? $product->post->post_title : $product->post->ID);
             $product_url=get_permalink( $product->post->ID );
             $product_description=$product->post->post_content ;
-            $product_price=$_product->get_price_html();
-            $active =$first ? 'active' : '';
-            echo sprintf('<div class="item %s"><img class="baseImg thumbnail media-object" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" >%s</img><div class="container"><div class="carousel-caption"><h1>%s</h1><p>%s</p><p><a class="btn btn-lg btn-primary" href="%s" role="button">%s</a></p></div></div></div>',$active,$image_src,$product_name,$product_description,$product_url,$product_price);
-            $first=FALSE;
+            $product_price=$product->get_price_html();
+            echo '<a href="' . $product_url . '"><div class="col-xs-6 col-md-4"> <div class="thumbnail"><img class="img-responsive media-object" data-src="holder.js/100%x200/random/text:'.$product_name.' " alt="'.$product_name.'" src="'.$image_src.'""><div class="caption category_caption_background"><h3 class="">'.$product_name.'</h3><p>'.$product_price.'</p></div></div></div></a>';
+            //echo sprintf('<div class="item %s"><img class="baseImg thumbnail media-object" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" >%s</img><div class="container"><div class="carousel-caption"><h1>%s</h1><p>%s</p><p><a class="btn btn-lg btn-primary" href="%s" role="button">%s</a></p></div></div></div>',$active,$image_src,$product_name,$product_description,$product_url,$product_price);
+            if($i == 3 ) {
+            	echo '</div><div class="row">';
+            	$i=0;
+            }
+            $i=$i+1;
           }
+         echo "</div>"; 
         ?>
-    	</div>
-		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>	
-
+		
 			<?php woocommerce_product_loop_end(); ?>
 
 			<?php
@@ -113,7 +112,7 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
-
+</div>
 	<?php
 		/**
 		 * woocommerce_sidebar hook
